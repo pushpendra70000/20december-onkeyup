@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onchange event</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <div class="c">
+
+        </div>
+        <form>
+            <input type="text" id="myinput" onkeyup="func1(this)">
+            <select class="myselect" onchange="myselect(this)">
+                <option >pushpenda</option> 
+                <option >arun</option> 
+                <option >deepak</option> 
+            </select>
+            <input type="text" class="myinput2" onkeypress="func2(this)">
+        </form>
+        <div style="height: 50px; width: 100px; background-color: red;">
+            <p class="mypara"></p>
+        </div>
+        <script>
+
+
+           /*let c1 = document.querySelector('div.c')
+                c1.innerHTML = "hello"*/
+
+             function func1(x){
+                let f1 = document.getElementById("myinput")
+                console.log(f1.value);
+            };
+            function func2(y){
+                //var f2 = document.querySelector('input.myinput2')
+                console.log("hello" +" " +y.value);
+            };
+            function myselect(z){
+                let name  = document.querySelector('select.myselect > option')
+                var about = document.querySelector("p.mypara")
+            if( name.value = "pushpendra" ){
+                about.innerHTML = "its me"
+                //console.log("its me");
+            } 
+            else if(name.value = "arun"){
+                about.innerHTML = "school friend"
+            }
+            else{
+                console.log("bachpan ka dost")
+            }
+
+            };
+            
+            // js object
+            /*let friends ={
+                //property:value;
+                friend1:"ARUN",
+                friend2:"DEEPAK",
+                
+                //methods
+                getfriend1(){
+                    console.log(this.friend1)
+                    //this.getFriend2();
+                },
+                getFriend2(){
+                    console.log(this.friend2)
+                    this.getfriend1();
+                },
+                
+            };
+            friends.getFriend2();
+            //this.getFriend3();*/
+            
+
+        </script>
+    </body>
+</html>
